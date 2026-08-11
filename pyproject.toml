@@ -13,6 +13,6 @@ dependencies = [
 Repository = "https://github.com/FNGarvin/ComfyUI-Model-Mover"
 
 [tool.comfy]
-PublisherId = "FNGarvin"
+PublisherId = "fngarvin"
 DisplayName = "ComfyUI-Model-Mover"
 Icon = ""
