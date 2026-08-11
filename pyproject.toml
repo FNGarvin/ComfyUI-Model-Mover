@@ -1,0 +1,18 @@
+[project]
+name = "comfyui-model-mover"
+version = "0.1.0"
+description = "Steam-Mover-style GUI for shuffling model files between two or more registered storage locations, keeping extra_model_paths.yaml in sync."
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.9"
+dependencies = [
+    "ruamel.yaml>=0.17.0",
+]
+
+[project.urls]
+Repository = "https://github.com/FNGarvin/ComfyUI-Model-Mover"
+
+[tool.comfy]
+PublisherId = "FNGarvin"
+DisplayName = "ComfyUI-Model-Mover"
+Icon = ""
