@@ -1,6 +1,6 @@
 # ComfyUI-Model-Mover
 
-A [Steam Mover](https://www.traynier.com/software/steammover)-inspired GUI built into ComfyUI, for shuffling model weights between two or more storage locations — for example, your fast primary drive and a larger backup drive — without hand-editing `extra_model_paths.yaml` or breaking any workflow that references those files.
+A [Steam Mover](https://www.traynier.com/software/steammover)-inspired GUI built into ComfyUI for shuffling model weights between two or more storage locations... for example, your fast primary drive and a larger backup drive — without hand-editing `extra_model_paths.yaml` or breaking any workflow that references those files.
 
 ![Model Mover Interface](images/ui_in_action.jpg)
 
