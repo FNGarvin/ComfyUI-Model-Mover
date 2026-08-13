@@ -301,15 +301,15 @@ class ModelMoverDialog extends ComfyDialog {
                 ? `${fmtBytes(d.free_bytes)} free / ${fmtBytes(d.total_bytes)}`
                 : (d.error ? `unavailable (${escapeHtml(d.error)})` : "\u2014");
             const removeBtn = d.is_managed
-                ? `<button class="mm-btn mm-btn-danger" data-remove="${d.id}" title="Un-register (files are not deleted)">Remove</button>`
+                ? `<button class="mm-btn mm-btn-danger" data-remove="${escapeHtml(d.id)}" title="Un-register (files are not deleted)">Remove</button>`
                 : "";
             return `
                 <div class="mm-dir-chip ${idx === 0 ? "mm-default" : ""}">
                     <b>${escapeHtml(d.label)}</b>
                     <span class="mm-mono" style="color:#999;">${escapeHtml(d.base_path)}</span>
                     <span style="color:#777;">${usage}</span>
-                    <button class="mm-btn" data-up="${d.id}" ${idx === 0 ? "disabled" : ""} title="Higher priority">\u2191</button>
-                    <button class="mm-btn" data-down="${d.id}" ${idx === last ? "disabled" : ""} title="Lower priority">\u2193</button>
+                    <button class="mm-btn" data-up="${escapeHtml(d.id)}" ${idx === 0 ? "disabled" : ""} title="Higher priority">\u2191</button>
+                    <button class="mm-btn" data-down="${escapeHtml(d.id)}" ${idx === last ? "disabled" : ""} title="Lower priority">\u2193</button>
                     ${removeBtn}
                 </div>`;
         }).join("");
@@ -341,7 +341,7 @@ class ModelMoverDialog extends ComfyDialog {
 
     renderPickers() {
         const opts = (selectedId) => this.directories.map((d) =>
-            `<option value="${d.id}" ${d.id === selectedId ? "selected" : ""}>${escapeHtml(d.label)}</option>`).join("");
+            `<option value="${escapeHtml(d.id)}" ${d.id === selectedId ? "selected" : ""}>${escapeHtml(d.label)}</option>`).join("");
 
         this.pickerSection.innerHTML = `
             <div class="mm-row-flex">

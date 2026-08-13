@@ -1,6 +1,6 @@
 [project]
 name = "comfyui-model-mover"
-version = "0.1.0"
+version = "0.1.1"
 description = "Steam-Mover-style GUI for shuffling model files between two or more registered storage locations, keeping extra_model_paths.yaml in sync."
 readme = "README.md"
 license = { file = "LICENSE" }
